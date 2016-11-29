@@ -1,5 +1,15 @@
-* {
+body {
   background-color: rgb(231,231,231);
+  margin: 0;
+}
+#page {
+  background-image: url("../img/rag.png") ;
+  background-repeat: repeat-x;
+  background-color: rgb(231,231,231);
+  padding: 2em 0;
+  display: block;
+  overflow: hidden;
+  /*margin: 0*/
 }
 #small {
   display: none;
@@ -7,6 +17,12 @@
 
 li {
   list-style: none;
+  color: #890101;
+  font-weight: bold;
+}
+li:hover {
+  color:red;
+  cursor: pointer;
 }
 img{
   max-width:100%;
@@ -16,13 +32,16 @@ img{
 }
 
 #container {
-  width: 100%;
+  width: 94%;
   display: block;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 #big {
   float: left;
-  width: 30%;
+  width: 35%;
+  margin: 0;
 }
 
 #nav, .content, .images, .footer {
@@ -41,6 +60,15 @@ img{
   float: left;
   border-bottom: 1px solid #000;
   display: block;
+  padding-bottom: 20px;
+  position: relative;
+}
+#nav li:hover::after {
+  content: url("../img/ornament2.png");
+  background-color: rgb(231,231,231);
+  position: absolute;
+  top: 35px;
+  right: 46%;
 }
 .first {
   margin-right: 3%;
@@ -50,18 +78,20 @@ img{
 }
 .content h1, .images h1 {
   text-align: center;
+  font-family: serif;
+  font-weight: lighter;
 }
 
 .main-images  li  {
   float: left;
-  margin: 0 3% 1.5em 0;
+  margin: 0 3% 0.5em 0;
   text-align: center;
   width: 14%;
-  font-size: 10px;
 }
 .main-images img {
   display:block;
   margin: 0 auto 1em;
+  box-shadow: 0 2px 4px #000;
 }
 
 #mainLeft {
@@ -84,67 +114,89 @@ ol {
     margin-right: 0;
 }
 
-
-
-
-
-
-/*#small {
-  display: none;
+span {
+  font-size: 11px;
+  font-weight: normal;
 }
 
-#container {
-  width: 95%;
-  margin: 0 auto;
-  display: block;
-}
-
-.header {
+.footer {
+  background: url("../img/ornament.png") 50% 0 repeat-x;
+  clear: both;
   float: none;
-  width: auto;
+  margin-left: 57%;
+  width: 20.5%;
+  top: 50px;
+}
+.footer p {
+  text-align: center;
+  margin: auto;
+  font-size: 13px;
+  padding: 30px 10px;
 }
 
 #big {
-  float: left;
-  width: 32%
-
-}
-
-#nav li {
-  float: left;
-  margin-right: 3.3%;
-  width: 31%;
-  border-bottom: 1px solid black;
-}
-
-#nav ul {
-  float: right;
-  margin: 40px 0 1em;
   text-align: center;
-  width: 65.9375%;
 }
 
-body {
-  display: block;
+.images h1 {
+  background: url("../img/ornament.png") no-repeat;
+
 }
 
-li {
-  list-style: none;
+.images h1 p {
+  background-color: rgb(231,231,231);
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-span {
-  display: block;
-}
+@media screen and (max-width: 1300px) {
+  #nav {
+    float: none;
+    width: 100%;
+  }
+  #nav li {
+    float: none;
+    /*left: 35%;*/
+    text-align: center;
+    margin: 0 auto;
+    width: 55%;
+    padding: 20px 0;
+  }
+  #navTop {
+    border-top: 1px solid black;
+    margin-right: 0;
+  }
+  #big {
+    float: none;
+    width: 100%;
+  }
 
-.content, .images, .footer, {
-  width: 65%;
-  float: right;
-}
+  .header {
+    width: 35%;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer {
+    overflow: hidden;
+    float: right;
+    margin: 0 auto;
+    width: 65%;
+    top: -50%;
+  }
+  .main-images li {
+    width: 33%;
+    margin: 0;
+  }
+  .main-images img {
+    width: 90%;
+  }
 
-.content p {
-  text-align: left;
+  #nav li:hover::after {
+    top: 55px;
+    left: 44%;
+    /*transform: translate(-40%, 0);*/
+    z-index: 0;
+  }
 }
-
-.last {
-  margin-right: 0;
-}*/
