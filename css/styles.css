@@ -196,7 +196,33 @@ span {
   #nav li:hover::after {
     top: 55px;
     left: 44%;
-    /*transform: translate(-40%, 0);*/
     z-index: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    float: none;
+    width: 100%;
+  }
+  #big {
+    display: none;
+  }
+  #small {
+    display: block;
+    margin: 0 auto;
+  }
+  #nav {
+    margin: 0 auto;
+  }
+  #nav li {
+    display: inline-block;
+    float: left;
+    width: 33%;
+    border-top: 1px solid #000;
+    margin-bottom: 20px;
+  }
+  .content, .images, .footer {
+    width: 100%;
   }
 }
